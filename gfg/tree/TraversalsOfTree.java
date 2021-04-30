@@ -1,8 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-import org.w3c.dom.Node;
-
 class TraversalsOfTree{
 
     public static void main(String args[]) 
@@ -12,6 +10,10 @@ class TraversalsOfTree{
     	root.right=new Node(30);
     	root.right.left=new Node(40);
     	root.right.right=new Node(50);
+
+        // |-------10-------|
+        // 20          |---30---|
+        //             40       50
     	
         System.out.println("Inorder Traversal of Tree");
     	inOrder(root);
@@ -47,13 +49,13 @@ class TraversalsOfTree{
         }
     }
 
-    public static levelOrder(Node root){
-        if(root==null) return null;
+    public static void levelOrder(Node root){
+        if(root==null) return;
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while(queue.isEmpty()==false){
             Node cur = queue.poll();
-            System.out.println(cur.key);
+            System.out.print(cur.key+" ");
             if(cur.left!=null)
                 queue.add(cur.left);
             if(cur.right!=null)
