@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class LeftViewOfTree {
     
     static ArrayList<Integer> leftViewUsingLevelOrderTraversal(Node root){
@@ -11,7 +13,7 @@ public class LeftViewOfTree {
             for(int i=0;i<a;i++){
                 Node cur = q.poll();
                 if(i==0)    
-                    ans.add(cur.data);
+                    ans.add(cur.key);
                 if(cur.left!=null)  
                     q.add(cur.left);
                 if(cur.right!=null) 
@@ -32,4 +34,5 @@ public class LeftViewOfTree {
 
         ArrayList<Integer> levelOrderAnswer = leftViewUsingLevelOrderTraversal(root);
         System.out.print(levelOrderAnswer);
+    }
 }

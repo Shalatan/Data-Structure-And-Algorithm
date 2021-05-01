@@ -1,3 +1,4 @@
+//when all the nodes follow Children Sum Propoert i.e Sum of both the childrens of node is equal to their parent
 public class ChildSumParent {
     
     public static int isSumProperty(Node root)

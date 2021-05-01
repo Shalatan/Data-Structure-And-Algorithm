@@ -1,25 +1,22 @@
 import java.util.*;
 public class MaxWidthOfTree {
     
-    static int getMaxWidth(Node root)
+    int getMaxWidth(Node root)
     {
         if(root==null) return 0;
         Queue<Node> q = new LinkedList<>();
-        LinkedList<Integer> list = new LinkedList<>();
         int ans = 0;
         q.add(root);
         while(q.isEmpty()==false){
             int a = q.size();
+            ans = Math.max(a,ans);
             for(int i=0;i<a;i++){
                 Node cur = q.poll();
-                list.add(cur.key);
                 if(cur.left!=null)
                     q.add(cur.left);
                 if(cur.right!=null)
                     q.add(cur.right);
             }
-            ans = Math.max(ans,list.size());
-            list.clear();
         }
         return ans;
     }
