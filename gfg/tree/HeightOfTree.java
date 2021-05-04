@@ -5,7 +5,9 @@ public class HeightOfTree {
         if(node==null){
             return 0;
         }
-        return Math.max(height(node.left),height(node.right))+1;
+        int lh = height(node.left);
+        int rh = height(node.right);
+        return Math.max(lh,rh)+1;
     }
 
     public static void main(String args[]) 
