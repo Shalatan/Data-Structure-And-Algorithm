@@ -1,7 +1,7 @@
 import java.util.*;
 public class MaxWidthOfTree {
     
-    int getMaxWidth(Node root)
+    static int getMaxWidth(Node root)
     {
         if(root==null) return 0;
         Queue<Node> q = new LinkedList<>();

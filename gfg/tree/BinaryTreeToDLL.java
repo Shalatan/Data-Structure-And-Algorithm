@@ -13,7 +13,7 @@ class LNode {
 
 public class BinaryTreeToDLL {
 
-    static LNode prev = null;                   //null only before first node is attached
+    static LNode prev = null;                   //null before first node is attached
     static LNode treeToDLL(LNode root) {
         if (root == null) {
             return null;
